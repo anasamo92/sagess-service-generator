@@ -1,0 +1,62 @@
+{
+    "name": "sagess-service-generator",
+    "version": "1.0.6",
+    "description": "File generation based on Swagger Interface",
+    "main": "./index.js",
+    "bin": {
+        "sagess-service-generator": "index.js"
+    },
+    "scripts": {
+        "prepare": "npm run build",
+        "test": "echo \"No test specified\"",
+        "build": "better-npm-run build",
+        "watch": "better-npm-run watch",
+        "example": "better-npm-run example"
+    },
+    "babel": {
+        "presets": [
+            "sagess"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/anasamo92/sagess-service-generator.git"
+    },
+    "license": "MIT",
+    "betterScripts": {
+        "build": {
+            "command": "babel ./src --out-dir .",
+            "env": {
+                "NODE_ENV": "production",
+                "LEGACY_EXPORTS": "true"
+            }
+        },
+        "watch": {
+            "command": "babel ./src --out-dir . --watch",
+            "env": {
+                "NODE_ENV": "production",
+                "LEGACY_EXPORTS": "true"
+            }
+        },
+        "example": {
+            "command": "node ./index.js",
+            "env": {
+                "TEMPLATE_FOLDER": "./templates",
+                "DEST_FOLDER": "./test",
+                "EOL": "\r\n",
+                "SWAGGER_SOURCE_OLD": "file:./swaggerSagess.json",
+                "SWAGGER_SOURCE": "http://cvm_vision_rec:9090/vision-app/swaggerApi"
+            }
+        }
+    },
+    "devDependencies": {
+        "babel-cli": "6.26.0",
+        "babel-preset-sagess": "^1.0.4",
+        "better-npm-run": "0.1.0",
+        "eslint-config-sagess": "^1.0.3"
+    },
+    "dependencies": {
+        "dot": "1.1.2",
+        "lodash.topairs": "4.3.0"
+    }
+}
