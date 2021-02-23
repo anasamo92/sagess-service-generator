@@ -1,6 +1,6 @@
 {
     "name": "sagess-service-generator",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "File generation based on Swagger Interface",
     "main": "./index.js",
     "bin": {
