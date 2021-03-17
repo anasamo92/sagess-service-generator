@@ -1,0 +1,7 @@
+{{= it.destFolder + '/' + it.filename }}.d.ts
+interface {{= it.name }} {
+{{ for(var endpoint of it.operations) { }}
+    // {{= endpoint.name }} :  {{= endpoint.summary }}
+    {{= endpoint.name }}(urlData: object, bodyData: object, options: object) : {{= endpoint.responseType}};
+{{ } }}
+ }
