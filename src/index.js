@@ -10,7 +10,7 @@ import { simpleGet } from './http-utilities';
 
 // Variable
 const {
-    TEMPLATE_FOLDER = './node_modules/focus-service-generator/templates',
+    TEMPLATE_FOLDER = './node_modules/sagess-service-generator/templates',
     DEST_FOLDER = './app/config/server/generated',
     EOL = '\n',
     SWAGGER_SOURCE

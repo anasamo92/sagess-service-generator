@@ -25,7 +25,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // Variable
 var _process$env = process.env,
     _process$env$TEMPLATE = _process$env.TEMPLATE_FOLDER,
-    TEMPLATE_FOLDER = _process$env$TEMPLATE === undefined ? './node_modules/focus-service-generator/templates' : _process$env$TEMPLATE,
+    TEMPLATE_FOLDER = _process$env$TEMPLATE === undefined ? './node_modules/sagess-service-generator/templates' : _process$env$TEMPLATE,
     _process$env$DEST_FOL = _process$env.DEST_FOLDER,
     DEST_FOLDER = _process$env$DEST_FOL === undefined ? './app/config/server/generated' : _process$env$DEST_FOL,
     _process$env$EOL = _process$env.EOL,
